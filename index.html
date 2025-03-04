@@ -18,14 +18,22 @@
                 <a goto="https://wo-r.github.io/" class="p-2 rounded-lg bg-zinc-100 cursor-pointer select-none hover:bg-yellow-50 transition-all">wo-r.github.io</a>
                 <a goto="https://github.com/wo-r" class="p-2 rounded-lg bg-zinc-100 cursor-pointer select-none hover:bg-yellow-50 transition-all">github.com/wo-r</a>
             </div>
-            <div class="mt-5">
+            <div class="mt-5 flex flex-col gap-2">
                 <input id="__search" class="rounded-lg w-full p-5 outline-none bg-zinc-100" placeholder="Search for a question">
+                <div class="flex flex-row gap-2">
+                    <a id="__load_math" class="p-2 rounded-lg bg-zinc-100 cursor-pointer select-none hover:bg-yellow-50 transition-all">Applied Math</a>
+                    <a id="__load_graphic_literacy" class="p-2 rounded-lg bg-zinc-100 cursor-pointer select-none hover:bg-yellow-50 transition-all">Graphic Literacy</a>
+                    <a id="__load_workspace" class="p-2 rounded-lg bg-zinc-100 cursor-pointer select-none hover:bg-yellow-50 transition-all">Workspace</a>                
+                </div>
             </div>
             <div class="flex flex-col gap-2 mt-5">
                 <b>Key</b>
-                <div class="flex flex-row gap-1 w-fit select-none">
-                    <span class="bg-green-300 p-2 rounded-md">Correct Answer</span>
-                    <span class="bg-red-300 p-2 rounded-md">Incorrect Answer</span>
+                <div class="flex flex-row justify-between items-center">
+                    <div class="flex flex-row gap-1 w-fit select-none">
+                        <span class="bg-green-300 p-2 rounded-md">Correct Answer</span>
+                        <span class="bg-red-300 p-2 rounded-md">Incorrect Answer</span>
+                    </div>
+                    <a href="./res/graphics-key.json" id="__breadcrumbs" class="p-2 rounded-lg bg-zinc-100 cursor-pointer select-none hover:bg-yellow-50 transition-all">res/graphics-key.json</a>
                 </div>
             </div>
             <div id="__workkeys" class="flex flex-col gap-2"></div>
