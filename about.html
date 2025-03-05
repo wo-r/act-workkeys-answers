@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" src="./res/favicon.ico" />
+
+    <title>ACT WorkKeys Answers (2025)</title>
+    <script src="./src/tailwind.min.js"></script>
+</head>
+<body class="bg-gray-200">
+    <div id="__next" class="container mx-auto px-4">
+        <div class="flex flex-col gap-2 py-4">
+            <div class="flex flex-row gap-2">
+                <a goto="/" class="p-2 rounded-lg bg-zinc-100 cursor-pointer select-none hover:bg-yellow-50 transition-all">&leftarrow; Back</a>
+            </div>
+            <div class="flex flex-col gap-5 mt-5">
+                <h1 class="text-5xl font-black">Heres an explanation of how I found this, so you in the future can maybe find it too.</h1>
+                <p classs="mt-1">
+                    Firstly, this requires the <b>Inspect Tool</b> common in most browsers by using CTRL + I (CMD + OPTION + I, for mac). Then you must go to the <b>Network</b> tab seen at the top:
+                </p>
+                <img src="./res/img/img-1.png" class="w-fit">
+                <p>
+                    Once you get there, and are on <b>workkeyscurriculum.act.org</b>, you then should go to the <b>filter</b> search bar:
+                </p>
+                <img src="./res/img/img-2.png" class="w-fit">
+                <p>
+                    Look for files named <b>web.json</b>. These relate to your personal account, so they will vary, however they all still should be the same in most ways.
+                </p>
+                <img src="./res/img/img-3.png" class="w-fit">
+                <p>
+                    Click on each of them and make sure you are on the <b>Resource</b> tab on the right side when you click it. Once you start doing that, look for a one that resembles this:
+                    <pre class="text-[10px]"><code>
+[
+    {
+        "id": 764845,
+        "question_category_id": 25106,
+        "question_family_id": null,
+        "content_location": "content_packages:1413:questions:764845",
+        "correct_answer": "Qw==",
+        "choices_count": 5,
+        "external_id": "I00067_2075.xml",
+        "question_type": "SMC",
+        "popular_answer": null,
+        "order": 4,
+        "content_preview": null,
+        "answer_content": "PHA+4oCcZXhwbGFpbiB0aGUgcnVsZXMgYWJvdXQgZW1wbG95ZWVzIHdobyBhcmUgcmVsYXRpdmVzLuKAnSBpcyB0aGUgY29ycmVjdCBhbnN3ZXIuPC9wPg==",
+        "question_content": "\u003cp\u003eYou work in the billing department at ABC Air. The main purpose of the policy shown is to:\u003c/p\u003e\n\u003col\u003e\n\u003cli\u003einstruct employees how to treat relatives who work at ABC Air.\u003c/li\u003e\n\u003cli\u003edescribe potentially stressful working conditions.\u003c/li\u003e\n\u003cli\u003eexplain the rules about employees who are relatives.\u003c/li\u003e\n\u003cli\u003eexplain why ABC Air never hires relatives of employees.\u003c/li\u003e\n\u003cli\u003edescribe the differences in family and work relationships.\u003c/li\u003e\n\u003c/ol\u003e",
+        "exam_id": 7311,
+        "approved_connections_ids": {},
+        "difficulty": "Easy",
+        "exam_section_id": null,
+        "study_duration": 120,
+        "elo_rank": 1082,
+        "hide_sidebar": false,
+        "highlight_selector": null,
+        "passage_id": 3553,
+        "question_version_id": 9517605,
+        "video_tracks": {},
+        "answer_container_type": "exam_result",
+        "question_voiceover_url": null,
+        "answer_voiceover_url": null,
+        "answer_choices": [],
+        "metadata": null,
+        "unscored": false,
+        "passage_version_id": 2887
+    },
+    ...
+    (continues for a really long time)
+]
+                    </code></pre>
+                </p>
+                <p>
+                    Once you this file, simply CTRL + F (CMD + F, for mac) and search for the question you are looking for. <b>IT MUST BE THE ANSWER QUESITON, NOT THE ACTUAL QUESTION</b>, here shown below in green is what I mean:
+                </p>
+                <img src="./res/img/img-4.jpg" class="w-fit">
+                <p>
+                    Once you have found your question, look for the <b>"correct_answer"</b> json variable. This is <b>encoded in Base64</b>, you can easily decrypt it <a href="https://www.base64decode.org/" class="underline">here</a>:
+                </p>
+                <pre class="text-[10px]"><code>
+Here is an example:
+    
+    Qw== <-- BASE64 
+    
+Converted: C <-- UTF-8, in readable string
+                </code></pre>
+                <p>
+                    And thats it! You can now easily get the answers yourself, however I'd recommend my website, since I went through the effort to get them all, and make them really fancy for you to easily understand and find each questiona and there answer. However, <b>I do not know if they change there questions every year</b>, hence why I listed this as 2025. But in the end, you know what to do now, so it's not really a big loss. Enjoy!
+                </p>
+            </div>
+            <small class="my-5">Copyright &copy; Wo-r 2019-<span id="__currentYear"></span></small>
+        </div>
+    </div>
+    <script src="./src/jquery.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
